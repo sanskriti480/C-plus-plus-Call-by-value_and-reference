@@ -7,13 +7,12 @@
 using namespace std;
 
 //Call by value
-int swap(int x,int y)
+void swap(int x,int y)
 {
     int swap;
     swap=x;
     x=y;
     y=swap;
-    return x,y;
 }
 int main()
 {
