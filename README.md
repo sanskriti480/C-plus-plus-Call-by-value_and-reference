@@ -2,11 +2,13 @@
 ---
 
 ## Aim  
-To understand pointers and its uses:  
-1. Performing arithmetic operations between values using pointers.
-2. Reversing an array using pointers.
-3. Demonstrating pointer arithmetic for different data types.
-4. Traversing a character array (string) using pointers.
+1.To understand and implement the concepts of function parameter passing techniques in C++.
+2.To demonstrate the difference between:
+Call by Value – passing a copy of actual parameters.
+Call by Reference (using pointers) – passing memory addresses of variables.
+Pass by Reference (using reference variables) – creating aliases for actual parameters.
+3.To analyze how each method affects variable values inside and outside the function.
+4.To compare the efficiency and usability of these methods in real-world programming scenarios.
 
 
 ---
