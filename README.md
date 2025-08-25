@@ -141,9 +141,13 @@ VS Code or Programiz Online C++ Compiler.
 - Declare two integer variables a = 5 and b = 2.
 - Call the function swap(a, b).
 - Inside the function:
+  
 1.Copy values of a and b into parameters x and y.
+
 2.Swap x and y using a temporary variable.
+
 3.Function ends (changes do not affect original variables).
+
 - Print values of a and b.
 - End
 
@@ -156,9 +160,13 @@ VS Code or Programiz Online C++ Compiler.
 - Declare two integer variables x = 500 and y = 200.
 - Call the function swap(&x, &y) (addresses are passed).
 - Inside the function:
+  
 1.Access values using pointers *x and *y.
+
 2.Swap their values using a temporary variable.
+
 3.Since addresses are used, changes reflect in original variables.
+
 - Print values of x and y.
 - End
 
@@ -172,9 +180,13 @@ VS Code or Programiz Online C++ Compiler.
 - Print initial values of a and b.
 - Call the function swap(a, b) (reference variables are used).
 - Inside the function:
+  
 1.References x and y directly refer to original a and b.
+
 2.Swap values using a temporary variable z.
+
 3.Original values of a and b get modified directly.
+
 - Print updated values of a and b.
 - End
 
@@ -185,9 +197,13 @@ VS Code or Programiz Online C++ Compiler.
 
 - Functions – modular blocks of reusable code.
 - Function Parameters –
+  
 1. Call by Value → copy of value passed.
+
 2. Call by Reference (pointers) → address passed.
+
 3. Pass by Reference (references) → alias passed.
+
 - Pointers – store addresses, allow indirect modification.
 - Reference Variables – alternate names for variables.
 - Swapping Logic – uses a temporary variable to exchange values.
