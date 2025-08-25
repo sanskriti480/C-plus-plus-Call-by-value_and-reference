@@ -51,6 +51,7 @@ VS Code or Programiz Online C++ Compiler.
 - Direct support for function overloading and inline functions improves efficiency.
 
 ### Call by value-  
+---
 - In Call by Value, a copy of the actual parameters (arguments) is passed to the function.
 - The function works on the copy of the data, not the original variables.
 - Any modification made inside the function does not affect the original values in the calling function.
@@ -80,12 +81,15 @@ VS Code or Programiz Online C++ Compiler.
 
 ---
 
-### Pointer arithmetic rules  
+### Advantages and disadvantages of call by value-  
 ---
 
-- Incrementing a pointer moves it to the next element of its type (ptr++).
-- Subtracting two pointers gives the number of elements between them.
-- Pointer arithmetic is valid only within the same array or memory block.
+## Advantages:
+- Original data remains safe (no risk of accidental changes).
+- Simple to implement and understand.
+## Disadvantages:
+- Inefficient for large data (requires copying).
+- Changes made inside the function are not reflected outside.
 
 ---
 
