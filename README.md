@@ -114,7 +114,7 @@ VS Code or Programiz Online C++ Compiler.
 #### Disadvantages:
 - Cannot be null (sometimes less flexible than pointers).
 - Overuse of references can make code confusing if not documented properly.
-- 
+
 ---
 
 ### Use cases-  
