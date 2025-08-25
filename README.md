@@ -5,11 +5,11 @@
 - To understand and implement the concepts of function parameter passing techniques in C++.
 - To demonstrate the difference between:
 
-Call by Value – passing a copy of actual parameters.
+1. Call by Value – passing a copy of actual parameters.
 
-Call by Reference (using pointers) – passing memory addresses of variables.
+2. Call by Reference (using pointers) – passing memory addresses of variables.
 
-Pass by Reference (using reference variables) – creating aliases for actual parameters.
+3. Pass by Reference (using reference variables) – creating aliases for actual parameters.
 
 - To analyze how each method affects variable values inside and outside the function.
 - To compare the efficiency and usability of these methods in real-world programming scenarios.
@@ -23,11 +23,12 @@ VS Code or Programiz Online C++ Compiler.
 ---
 
 ## Objectives  
-- To learn the concept of pointers in C++.
-- To perform arithmetic operations on values accessed via pointers.
-- To traverse and reverse arrays using pointers.
-- To demonstrate pointer arithmetic for int, float, double, and bool types.
-- To iterate through a character array using pointers.
+- To understand how data is passed to functions in C++ through different parameter passing techniques.
+- To study the effect of Call by Value, Call by Reference (using pointers), and Pass by Reference (using reference variables) on the original variables.
+- To implement and compare the three swapping techniques in C++.
+- To observe how Call by Value does not modify actual parameters, while Call by Reference and Pass by Reference modify them directly.
+- To analyze why C++ provides references in addition to pointers for simpler and safer programming.
+- To improve understanding of memory management and efficiency in function calls.
 
   
 ---
@@ -49,47 +50,33 @@ VS Code or Programiz Online C++ Compiler.
 
 - Direct support for function overloading and inline functions improves efficiency.
 
-### What are pointers?  
-1. A pointer is a variable that stores the memory address of another variable instead of storing the actual data.
-2. It allows indirect access to a variable’s value by using the dereference (*) operator.
-3. Pointers enable efficient memory manipulation, making them powerful for systems programming, embedded systems, and performance-critical code.
-4. Historically, pointers are a defining feature of C and C++, giving programmers low-level control over memory.
+### Call by value-  
+- In Call by Value, a copy of the actual parameters (arguments) is passed to the function.
+- The function works on the copy of the data, not the original variables.
+- Any modification made inside the function does not affect the original values in the calling function.
+- This approach is simple and safe, but less efficient for large data structures because it requires extra memory for copies.
+- Example: Swapping using Call by Value will not work, as changes are made only to the local copies inside the function.
 
-### Syntax:###  
-```
-Syntax:
-data_type *pointer_name;
-
-Examples:
-int *ptr; → Pointer to an integer.
-float *fptr; → Pointer to a float.
-char *cptr; → Pointer to a character.
-
-The data type of the pointer must match the type of variable it points to.
-
-```
-
-### How is pointer stored?  
+### Call by reference- 
 ---
-1. A pointer itself is stored like any other variable in memory.
-2. It occupies a fixed number of bytes (4 bytes in 32-bit systems, 8 bytes in 64-bit systems).
-3. The value stored inside a pointer is an address, not actual data.
-4. When dereferenced (*pointer), the CPU accesses the value located at that address.
+-  In Call by Reference using pointers, the memory addresses of variables are passed to the function.
+- The function receives the pointer to the original variable, so it can directly access and modify the actual data.
+- Any changes inside the function reflect in the original variables because the function works on the same memory location.
+- This method is memory efficient since no copy of the variable is created.
+- However, pointer usage can be error-prone if not handled carefully (e.g., null or dangling pointers).
+- Example: Swapping using Call by Reference with pointers is successful, as it changes the values at the original memory locations.
 
 ---
 
-### Types of pointers  
+### Pass by reference-  
 ---
-1. Null Pointer – Points to nothing (int *ptr = NULL;).
-2. Void Pointer (Generic Pointer) – Can hold the address of any data type (void *ptr;).
-3. Dangling Pointer – Points to memory that has been freed/deallocated.
-4. Wild Pointer – An uninitialized pointer (points to random memory).
-5. Constant Pointer – Pointer cannot change the address it holds, but the value at that address can change (int * const ptr).
-6. Pointer to Constant – Pointer can change the address it holds, but cannot change the value (const int *ptr).
-7. Constant Pointer to Constant – Neither the pointer’s address nor the value can change (const int * const ptr).
-8. Function Pointer – Holds the address of a function (void (*fptr)()).
-9. Pointer to Pointer (Double Pointer) – Stores the address of another pointer (int **pp).
-10. Array Pointer – Points to the first element of an array (int *ptr = arr;).
+- In Pass by Reference, reference variables (aliases) are used instead of pointers.
+- A reference acts as an alternative name for an existing variable.
+- The function directly operates on the original variable, without needing pointers or dereferencing.
+- Any modifications made inside the function directly affect the original variables.
+- Safer and easier to use compared to pointers since it eliminates pointer-related risks.
+- More efficient because no memory copies are created.
+- Example: Swapping using Pass by Reference works correctly and is considered the most modern and safe approach in C++.
 
 ---
 
