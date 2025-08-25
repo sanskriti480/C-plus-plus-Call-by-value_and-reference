@@ -134,82 +134,48 @@ VS Code or Programiz Online C++ Compiler.
 
 ## Algorithms
 
-### Program 1 Increment of pointers
+### Program 1 Call by value
 ---
 
 - Start
-- Declare variables of different data types:
-
-a as int
-
-b as float
-
-c as double
-
-d as bool
-- Declare pointers for each variable and store their addresses:
-
-aptr = &a
-
-bptr = &b
-
-cptr = &c
-
-dptr = &d
-- For each pointer:
-a. Print the address before increment.
-b. Increment the pointer by 1 (ptr++).
-c. Print the address after increment.
-- End.
-
----
-
-### Program 2 Difference / Addition
----
-
-- Start
-- Declare two integer variables x = 100 and y = 50.
-- Declare an integer pointer xptr and assign it the address of x.
-- Declare another integer pointer yptr and assign it the address of y.
-- Dereference both pointers and calculate the sum:
-
-sum = *xptr + *yptr.
-
-- Print the result → "Sum is: sum".
-- Dereference both pointers and calculate the difference:
-difference = *xptr - *yptr.
-- Print the result → "Difference is: difference".
-- End 
----
-
-### Program 3 Traversing array using pointer
----
-
-- Start
-- Declare an integer array arr[5] = {2, 4, 6, 8, 10}.
-- Initialize a pointer ptr to point to the last element of the array (arr + 4).
-- Use a for loop that runs from index i = 4 down to 0:
-  
-  Print the value pointed to by ptr (*ptr).
-  
-  Decrement the pointer (ptr--) so it moves to the previous element.
-- After the loop ends, all elements of the array are printed in reverse order.
+- Declare two integer variables a = 5 and b = 2.
+- Call the function swap(a, b).
+- Inside the function:
+1.Copy values of a and b into parameters x and y.
+2.Swap x and y using a temporary variable.
+3.Function ends (changes do not affect original variables).
+- Print values of a and b.
 - End
 
 ---
 
-### Program 4 Printing string using pointers
+### Program 2 Call by reference
 ---
 
 - Start
-- Declare a character array str[] = "Hello World".
-- Initialize a pointer ptr to point to the first character of the string (ptr = str).
-- Begin a while loop that runs until the character pointed to by ptr is the null terminator ('\0').
-- 
-Print the character at *ptr.
+- Declare two integer variables x = 500 and y = 200.
+- Call the function swap(&x, &y) (addresses are passed).
+- Inside the function:
+1.Access values using pointers *x and *y.
+2.Swap their values using a temporary variable.
+3.Since addresses are used, changes reflect in original variables.
+- Print values of x and y.
+- End
 
-Increment the pointer (ptr++) to move to the next character.
-- When *ptr == '\0', exit the loop.
+---
+
+### Program 3 Pass by reference
+---
+
+- Start
+- Declare two integer variables a = 45 and b = 35.
+- Print initial values of a and b.
+- Call the function swap(a, b) (reference variables are used).
+- Inside the function:
+1.References x and y directly refer to original a and b.
+2.Swap values using a temporary variable z.
+3.Original values of a and b get modified directly.
+- Print updated values of a and b.
 - End
 
 ---
@@ -217,23 +183,25 @@ Increment the pointer (ptr++) to move to the next character.
 ## Concepts Used  
 ---
 
-- Pointer declaration and initialization.
-- Dereferencing (* operator).
-- Address-of operator (&).
-- Pointer arithmetic (increment and decrement).
-- Array traversal using pointers.
-- Character array traversal.
-- Type-dependent pointer incrementation.
-- Null pointers and void pointers.
-- Memory representation of pointers.
+- Functions – modular blocks of reusable code.
+- Function Parameters –
+1. Call by Value → copy of value passed.
+2. Call by Reference (pointers) → address passed.
+3. Pass by Reference (references) → alias passed.
+- Pointers – store addresses, allow indirect modification.
+- Reference Variables – alternate names for variables.
+- Swapping Logic – uses a temporary variable to exchange values.
+- Scope – shows effect of local vs referenced variables.
+- Input/Output – use of cout to display results.
 
 ---
 
 ## Conclusion
 ---
 
-- In this experiment, we learned the use of pointers to access and manipulate data using memory addresses. 
-- We performed arithmetic operations, array reversal, and string traversal using pointers. 
-- This shows that pointers provide efficient memory access, flexibility, and are essential for advanced concepts like dynamic memory allocation.
+- Call by Value does not affect the original variables since only copies are modified.
+- Call by Reference using pointers allows direct modification of variables through their memory addresses.
+- Pass by Reference using references provides a cleaner and safer way to achieve the same effect without explicit pointer syntax.
+- Overall, C++ offers flexible parameter passing mechanisms, making functions more powerful and adaptable for different programming needs.
 
 ---
